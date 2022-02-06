@@ -1,8 +1,11 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
 import { getLCP, getFID, getCLS } from "web-vitals";
 import { GridWrap, GridRow, GridColumn } from "emotion-flex-grid";
+import Cardo from "./components/Cardo";
+import Dashboard from "./components/Dashboard";
+import Pricing from "./components/Pricing";
+import Company from "./components/Company";
+import Deposit from "./components/Deposit";
 
 if (typeof window !== "undefined") {
   getCLS(console.log);
@@ -15,16 +18,31 @@ if (typeof window !== "undefined") {
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+    <div>
+     <h2>Salaamu Caleykum!</h2>
+     {/* <Cardo>Landing Page</Cardo>
+     <Deposit>Deposit</Deposit>
+     <Company>Company</Company>
+     <Dashboard>Dashboard</Dashboard>
+     <Pricing>Pricing$$</Pricing> */}
+     <section>
+    <GridColumn mx={['s', 'm']}>
+      <GridWrap>
+        <GridRow>
+          <GridColumn width={[12, 3]}>
+            <div>Content</div>
+          </GridColumn>
+          <GridColumn width={[12, 3]}>
+            <div>Content</div>
+          </GridColumn>
+          <GridColumn width={[12, 3]}>
+            <div>Content</div>
+          </GridColumn>
+        </GridRow>
+      </GridWrap>
+    </GridColumn>
+  </section>
+
     </div>
   );
 }
